@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+  <head>
+
+     <!-- ini dari aframe -->
+     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+
+     <!-- Include components after the A-Frame script, but before <a-scene>. -->
+<script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js">
+</script>
+<script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js">
+</script>
+
+     <!-- aframe -->
+    <meta charset="utf-8">
+    <title> webAR Practice </title>
+  </head>
+  <body>
+    <a-scene>
+
+            <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+            <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+            <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+            <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+            <a-sky color="#ECECEC"></a-sky> -->
+
+      <!-- <a-box position="0 0.5 -5" rotation="0 0 0" height="10" width="3" length="3" color="#469E26"></a-box> -->
+      <a-sphere position="0 3.25 -10" radius="3.25" color="#EF2D5E"
+      wireframe="2">
+
+        <a-animation attribute= "rotation"
+                     dur= "10000"
+                     fill= "forwards"
+                     to= "360 360 360"
+                     repeat= "indefinite">
+
+                   </a-animation>
+                   <!-- <a-animation attribute= "position"
+                                             dur= "10000"
+                                             fill= "forwards"
+                                             to= "0 3.25 360"
+                                             repeat= "indefinite">
+
+                              </a-animation> -->
+      </a-sphere>
+
+      <a-torus-knot position="0 3.25 -10" color="#D84A39" arc="180" p="2" q="7" radius="2" radius-tubular="0.1">
+
+      <a-animation attribute= "rotation"
+                   dur= "5000"
+                   fill= "forwards"
+                   to= "180 360 0"
+                   repeat= "indefinite">
+
+                 </a-animation>
+      </a-torus-knot>
+
+<a-entity particle-system="preset: snow; particleCount: 10000">
+
+  <a-animation attribute= "rotation"
+               dur= "10000"
+               fill= "forwards"
+               to= "180 360 0"
+               repeat= "indefinite">
+         </a-animation>
+
+</a-entity>
+<a-assets>
+
+ <a-asset-item id="brainstem" src="https://cdn.aframe.io/test-models/models/brainstem/BrainStem.gltf"></a-asset-item>
+ </a-assets>
+
+<a-entity gltf-model="#brainstem" position="0 1.20 -10" scale="2.3 2.3 2.3">
+
+    <a-animation attribute= "rotation"
+                 dur= "5000"
+                 fill= "forwards"
+                 to= "0 360 0"
+                 repeat= "indefinite">
+           </a-animation>
+
+  </a-entity>
+      <!-- <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
+      <!-- <a-plane position="0 0 -4" rotation="-90 0 0" width="360" height="361" color="#1F2120"></a-plane>-->
+
+
+
+      <a-sky color="#1F2120">
+      </a-sky>
+    </a-scene>
+
+
+
+  </body>
+</html>
